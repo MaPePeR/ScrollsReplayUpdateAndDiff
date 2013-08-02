@@ -31,7 +31,7 @@ def readNextJsonMessage(handle, assertMsg=None):
     return message
 
 def writeMessage(message):
-    outfilestream.write(json.dumps(message))
+    outfilestream.write(json.dumps(message, separators=(',', ':')))
     outfilestream.write("\n\n\n")
 
 with open(file1, "r") as handle:
